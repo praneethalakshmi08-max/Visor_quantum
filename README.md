@@ -75,9 +75,11 @@ Q-HUB
 ![Dashboard](screenshots/dashboard.png)
 
 ## Installation:
-``bash
+``
  Clone the repository
   git clone https://github.com/[praneethalakshmi08-max]/Q-HUB.git
+``
+``
  Naviagte to the project directory: Cd Q-HUB
 `` 
 ## How to Run
