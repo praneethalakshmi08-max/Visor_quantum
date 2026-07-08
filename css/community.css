@@ -1,0 +1,9 @@
+.comm-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+.project-card { padding: 18px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.project-card .p-name { font-size: 14.5px; font-weight: 700; }
+.project-card .p-meta { font-size: 11.5px; color: var(--text-dim); font-family: 'JetBrains Mono', monospace; margin-top: 4px; }
+.badge { font-family: 'JetBrains Mono', monospace; font-size: 10px; padding: 4px 10px; border-radius: 100px; border: 1px solid var(--violet-dim); color: var(--violet); }
+.leader-row { display: flex; justify-content: space-between; padding: 11px 4px; border-bottom: 1px solid var(--line); font-size: 13px; }
+.leader-row:last-child { border-bottom: none; }
+.leader-row .rank { color: var(--cyan); font-family: 'JetBrains Mono', monospace; width: 26px; }
+.leader-row .score { color: var(--amber); font-family: 'JetBrains Mono', monospace; }
