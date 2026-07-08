@@ -1,0 +1,11 @@
+@media (max-width: 880px) {
+  .hero { grid-template-columns: 1fr; padding-top: 120px; }
+  .composer-grid { grid-template-columns: 1fr; }
+  .tiers, .fund-grid, .gloss-grid, .qpu-metrics, .comm-grid, .results { grid-template-columns: 1fr; }
+  .stripe { flex-wrap: wrap; }
+  .stripe div { flex: 1 1 45%; border-bottom: 1px solid var(--line); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
