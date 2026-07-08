@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QUBIT_LAB // Quantum Computing Platform</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/bloch.css">
+  <link rel="stylesheet" href="css/composer.css">
+  <link rel="stylesheet" href="css/glossary.css">
+  <link rel="stylesheet" href="css/qpu.css">
+  <link rel="stylesheet" href="css/community.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/translate.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+
+  <nav>
+    <div class="logo"><span class="logo-dot"></span>QUBIT_LAB</div>
+    <div class="navlinks">
+      <a href="#visualizer">Bloch Sphere</a>
+      <a href="#composer">Circuit Composer</a>
+      <a href="#learn">Curriculum</a>
+      <a href="#glossary">Glossary</a>
+      <a href="#qpu">QPU Status</a>
+      <a href="#community">Community</a>
+    </div>
+    <div class="translate-wrap">
+      <button class="btn ghost small" id="translate-btn">🌐 Translate</button>
+      <div class="translate-dropdown" id="translate-dropdown">
+        <div class="translate-label">TRANSLATE PAGE</div>
+        <div id="google_translate_element"></div>
+        <div class="translate-note">Powered by Google Translate · content may not be perfectly accurate</div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="top">
+    <div>
+      <div class="hero-tag mono"><span class="logo-dot" style="width:6px;height:6px;"></span> SIMULATOR ONLINE · NO ACCOUNT REQUIRED</div>
+      <h1>Learn quantum computing by<br><span class="grad">rotating the state</span> yourself.</h1>
+      <p class="sub">A hands-on lab for bridging linear algebra and intuition — manipulate a live qubit on the Bloch sphere, wire up circuits, and watch superposition collapse into probability in real time.</p>
+      <div class="btnrow">
+        <a href="#visualizer" class="btn">Enter the Bloch Sphere →</a>
+        <a href="#composer" class="btn ghost">Build a Circuit</a>
+      </div>
+    </div>
+    <div class="bloch-wrap panel">
+      <div class="bloch-corner"></div><div class="bloch-corner tr"></div><div class="bloch-corner bl"></div><div class="bloch-corner br"></div>
+      <div class="bloch-hud"><span>QUBIT_00 · LIVE</span><span id="hero-basis">|ψ ⟩ = |0 ⟩</span></div>
+      <canvas id="bloch-canvas-hero"></canvas>
+    </div>
+  </section>
+
+  <div class="stripe mono">
+    <div><div class="num">6</div><div class="lbl">GATES SIMULATED</div></div>
+    <div><div class="num">4</div><div class="lbl">STATE DIMENSIONS</div></div>
+    <div><div class="num">3</div><div class="lbl">CURRICULUM TIERS</div></div>
+    <div><div class="num">∞</div><div class="lbl">CIRCUIT COMBINATIONS</div></div>
+  </div>
+
+  <section id="visualizer">
+    <div class="section-head">
+      <div class="eyebrow">01 · Single Qubit Visualizer</div>
+      <h2>The Bloch Sphere</h2>
+      <p>Click gate controls to apply unitary transformations to qubit |0⟩ and observe real-time trajectory shifts on the Bloch sphere surface.</p>
+    </div>
+    <div class="bloch-wrap panel" style="max-width: 600px; margin: 0 auto;">
+      <div class="bloch-corner"></div><div class="bloch-corner tr"></div><div class="bloch-corner bl"></div><div class="bloch-corner br"></div>
+      <canvas id="bloch-canvas"></canvas>
+    </div>
+    <div class="gatebar">
+      <button class="gatebtn" data-gate="H">H</button>
+      <button class="gatebtn" data-gate="X">X</button>
+      <button class="gatebtn" data-gate="Y">Y</button>
+      <button class="gatebtn" data-gate="Z">Z</button>
+      <button class="gatebtn" data-gate="S">S</button>
+      <button class="gatebtn" data-gate="T">T</button>
+      <button class="gatebtn" data-gate="RESET" style="border-color:var(--danger); color:var(--danger);"> ↺ </button>
+    </div>
+    <div class="state-readout mono" id="state-readout">|ψ ⟩ = <b>1.00</b>|0 ⟩ + <b>0.00</b>|1 ⟩ &nbsp;·&nbsp; P(0)=<b>100%</b> P(1)=<b>0%</b></div>
+  </section>
+
+  <section id="composer">
+    <div class="section-head">
+      <div class="eyebrow">02 · Hands-on Circuit Design</div>
+      <h2>Circuit Composer</h2>
+      <p>Select a gate, then click a wire to place it. Chain an H with a CNOT to build your first entangled Bell pair — no code required.</p>
+    </div>
+    <div class="composer-grid panel" style="padding:22px;">
+      <div class="palette">
+        <button data-g="H" class="gsel">Hadamard <span class="tag">H</span></button>
+        <button data-g="X" class="gsel">Pauli-X <span class="tag">NOT</span></button>
+        <button data-g="Z" class="gsel">Pauli-Z <span class="tag">PHASE</span></button>
+        <button data-g="CNOT" class="gsel">CNOT <span class="tag">2-QUBIT</span></button>
+        <button data-g="ERASE" class="gsel" style="border-color:var(--danger); color:var(--danger);">Erase Gate ⌫</button>
+      </div>
+      <div class="circuit-board">
+        <div id="circuit-wires"></div>
+        <div class="composer-actions">
+          <button class="btn small" id="run-circuit-btn">► Run Simulation</button>
+          <button class="btn ghost small" id="clear-circuit-btn">Clear Circuit</button>
+        </div>
+        <div class="results">
+          <div>
+            <div class="eyebrow" style="margin-bottom:8px;">Measurement Probabilities</div>
+            <div class="hist-bars" id="hist-bars"></div>
+          </div>
+          <div>
+            <div class="eyebrow" style="margin-bottom:8px;">State Vector Amplitudes</div>
+            <div class="amp-list" id="amp-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <div class="eyebrow">03 · Concept Primer Library</div>
+      <h2>The mathematical bedrock</h2>
+      <p>Every module below builds toward gate-based programming — start here if complex amplitudes still feel unfamiliar.</p>
+    </div>
+    <div class="fund-grid">
+      <div class="panel fund-card"><div class="ico"> ℂ </div><h4>Complex Numbers</h4><p>Amplitudes are complex — magnitude sets probability, phase sets interference.</p></div>
+      <div class="panel fund-card"><div class="ico">[·]</div><h4>Linear Algebra</h4><p>Qubit states are vectors in Hilbert space; gates are unitary matrices acting on them.</p></div>
+      <div class="panel fund-card"><div class="ico"> ⊗ </div><h4>Tensor Products</h4><p>Combining qubits multiplies their state spaces — 2 qubits means 4 amplitudes, not 2+2.</p></div>
+      <div class="panel fund-card"><div class="ico"> ⟨ ψ|</div><h4>Bra-Ket Notation</h4><p>Dirac notation is shorthand for vectors and their inner products — the language of every paper you'll read next.</p></div>
+    </div>
+  </section>
+
+  <section id="learn">
+    <div class="section-head">
+      <div class="eyebrow">04 · Progressive Curriculum</div>
+      <h2>A path that scales with you</h2>
+    </div>
+    <div class="tiers">
+      <div class="panel tier beginner">
+        <div class="lvl">TIER 01 · BEGINNER</div>
+        <h3>Foundations</h3>
+        <ul>
+          <li>Superposition & measurement</li>
+          <li>The Bloch sphere</li>
+          <li>Entanglement, intuitively</li>
+          <li>Decoherence & noise</li>
+        </ul>
+      </div>
+      <div class="panel tier intermediate">
+        <div class="lvl">TIER 02 · INTERMEDIATE</div>
+        <h3>Algorithms</h3>
+        <ul>
+          <li>Grover Search</li>
+          <li>Phase Estimation</li>
+          <li>Quantum Fourier Transform</li>
+          <li>Error Mitigation</li>
+        </ul>
+      </div>
+      <div class="panel tier advanced">
+        <div class="lvl">TIER 03 · ADVANCED</div>
+        <h3>Applications</h3>
+        <ul>
+          <li>VQE for Quantum Chemistry</li>
+          <li>QAOA Optimization</li>
+          <li>Quantum Machine Learning</li>
+          <li>Fault Tolerant Hardware</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="glossary">
+    <div class="section-head">
+      <div class="eyebrow">05 · Quick Reference</div>
+      <h2>Quantum Glossary</h2>
+    </div>
+    <input class="glossary-search mono" id="gloss-search" placeholder="Search terms — try 'entanglement' or 'ansatz'…">
+    <div class="gloss-grid" id="gloss-grid"></div>
+  </section>
+
+  <section id="qpu">
+    <div class="section-head">
+      <div class="eyebrow">06 · Hardware Bridge</div>
+      <h2>Live QPU Status</h2>
+      <p>A simulated diagnostic feed. Connect your own IBM Quantum or AWS Braket API key to route circuits to real hardware.</p>
+    </div>
+    <div class="panel qpu-panel">
+      <div class="qpu-top">
+        <div class="mono" style="font-size:13px;"><span class="live-dot"></span>ibm_kyiv · 127Q · SIMULATED FEED</div>
+        <button class="btn ghost small" id="connect-api-btn">Connect API Key</button>
+      </div>
+      <div class="qpu-metrics">
+        <div class="metric"><div class="m-label">QUEUE DEPTH</div><div class="m-val" id="m-queue">—</div></div>
+        <div class="metric"><div class="m-label">T1 COHERENCE</div><div class="m-val" id="m-t1">—</div></div>
+        <div class="metric"><div class="m-label">GATE FIDELITY</div><div class="m-val" id="m-fid">—</div></div>
+        <div class="metric"><div class="m-label">UPTIME</div><div class="m-val" id="m-up">—</div></div>
+      </div>
+      <canvas id="qpu-chart"></canvas>
+      <div class="disclaimer"> ※ Illustrative telemetry for demo purposes — not connected to live hardware.</div>
+    </div>
+  </section>
+
+  <section id="community">
+    <div class="section-head">
+      <div class="eyebrow">07 · Community</div>
+      <h2>Showcase & Challenges</h2>
+    </div>
+    <div class="comm-grid">
+      <div id="project-list"></div>
+      <div class="panel" style="padding:18px;">
+        <div class="eyebrow" style="margin-bottom:12px;">Weekly Challenge</div>
+        <h4 style="font-size:15px; margin-bottom:8px;">Construct GHZ State</h4>
+        <p style="font-size:12.5px; color:var(--text-dim); line-height:1.5; margin-bottom:14px;">
+          Create maximum 3-qubit entanglement using minimal gates.
+        </p>
+        <button class="btn small" id="submit-score-btn" style="width:100%; justify-content:center;">Submit Solution Score</button>
+        <div style="margin-top:20px;">
+          <div class="eyebrow" style="margin-bottom:10px;">Leaderboard</div>
+          <div id="leaderboard-list"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    QUBIT_LAB // SIMULATED QUANTUM PLATFORM · OPEN ACCESS INTUITION ENGINE
+  </footer>
+
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-box panel" id="modal-box"></div>
+  </div>
+
+  <script src="js/complexMath.js"></script>
+  <script src="js/gates.js"></script>
+  <script src="js/blochSphere.js"></script>
+  <script src="js/composer.js"></script>
+  <script src="js/glossary.js"></script>
+  <script src="js/qpuStatus.js"></script>
+  <script src="js/community.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/translate.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
