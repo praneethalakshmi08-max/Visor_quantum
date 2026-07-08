@@ -75,13 +75,11 @@ Q-HUB
 ![Dashboard](screenshots/dashboard.png)
 
 ## Installation:
-``
-## Clone the repository
+``bash
+ Clone the repository
   git clone https://github.com/[praneethalakshmi08-max]/Q-HUB.git
-
-## Naviagte to the project directory:
-   Cd Q-HUB
-``
+ Naviagte to the project directory: Cd Q-HUB
+`` 
 ## How to Run
    - Option 1 (Recommended)
    1. Open the project using Visual Studio Code.
