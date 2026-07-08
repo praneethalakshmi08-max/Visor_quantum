@@ -1,0 +1,32 @@
+/* Fundamentals */
+.fund-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
+.fund-card { padding: 20px; text-align: left; }
+.fund-card .ico { font-family: 'JetBrains Mono', monospace; color: var(--cyan); font-size: 22px; margin-bottom: 10px; }
+.fund-card h4 { font-size: 15px; margin-bottom: 8px; }
+.fund-card p { font-size: 12.5px; color: var(--text-dim); line-height: 1.6; }
+
+/* Tiers Curriculum */
+.tiers { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.tier { padding: 26px 22px; position: relative; overflow: hidden; }
+.tier .lvl { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.15em; }
+.tier.beginner .lvl { color: var(--cyan); }
+.tier.intermediate .lvl { color: var(--amber); }
+.tier.advanced .lvl { color: var(--violet); }
+.tier h3 { margin: 10px 0 14px; font-size: 19px; }
+.tier ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.tier li { font-size: 13.5px; color: var(--text-dim); padding-left: 16px; position: relative; }
+.tier li::before { content: ' ▹ '; position: absolute; left: 0; color: inherit; }
+.tier.beginner li::before { color: var(--cyan); }
+.tier.intermediate li::before { color: var(--amber); }
+.tier.advanced li::before { color: var(--violet); }
+
+/* Glossary Search & Grid */
+.glossary-search {
+  width: 100%; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--line); background: rgba(255,255,255,0.02);
+  color: var(--text); font-family: 'JetBrains Mono', monospace; font-size: 14px; margin-bottom: 20px;
+}
+.glossary-search:focus { outline: none; border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(0,246,255,0.08); }
+.gloss-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
+.gloss-item { padding: 16px 18px; }
+.gloss-item .term { color: var(--cyan); font-family: 'JetBrains Mono', monospace; font-size: 13.5px; font-weight: 700; }
+.gloss-item .def { color: var(--text-dim); font-size: 13px; margin-top: 6px; line-height: 1.6; }
