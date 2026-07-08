@@ -40,6 +40,7 @@ An Iinteractive Quantum Learning Platform
 - Netlify
 
 ## Screenshots
+```
 Q-HUB
 |
 |--README.md
@@ -50,7 +51,8 @@ Q-HUB
 |       |--blochsphere.png
 |       |--quiz.png
 |       |--ai-assistant.png
-|       |--dashboard.png 
+|       |--dashboard.png
+```
 ## Homepage
 ![Homepage](screenshots/homepage.png)
 
@@ -73,12 +75,12 @@ Q-HUB
 ![Dashboard](screenshots/dashboard.png)
 
 ## Installation:
-``bash
-Clone the repository
+``
+## Clone the repository
   git clone https://github.com/[praneethalakshmi08-max]/Q-HUB.git
 
-Naviagte to the project directory:
-    Cd Q-HUB
+## Naviagte to the project directory:
+   Cd Q-HUB
 ``
 ## How to Run
    - Option 1 (Recommended)
