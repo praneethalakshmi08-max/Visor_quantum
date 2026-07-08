@@ -1,0 +1,19 @@
+.bloch-wrap { position: relative; aspect-ratio: 1/1; }
+#bloch-canvas, #bloch-canvas-hero { width: 100%; height: 100%; border-radius: 20px; }
+.bloch-hud {
+  position: absolute; top: 14px; left: 14px; right: 14px; display: flex; justify-content: space-between;
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--cyan); letter-spacing: 0.1em; pointer-events: none;
+}
+.bloch-corner { width: 18px; height: 18px; border-top: 2px solid var(--cyan-dim); border-left: 2px solid var(--cyan-dim); position: absolute; top: 10px; left: 10px; }
+.bloch-corner.tr { left: auto; right: 10px; border-left: none; border-right: 2px solid var(--cyan-dim); }
+.bloch-corner.bl { top: auto; bottom: 10px; border-top: none; border-bottom: 2px solid var(--cyan-dim); }
+.bloch-corner.br { top: auto; bottom: 10px; left: auto; right: 10px; border-top: none; border-left: none; border-bottom: 2px solid var(--cyan-dim); border-right: 2px solid var(--cyan-dim); }
+
+.gatebar { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; justify-content: center; }
+.gatebtn {
+  width: 44px; height: 44px; border-radius: 8px; border: 1px solid var(--violet-dim); background: rgba(178,107,255,0.08);
+  color: var(--violet); font-family: 'JetBrains Mono', monospace; font-weight: 700; cursor: pointer; transition: all .15s;
+}
+.gatebtn:hover { background: var(--violet); color: #000; box-shadow: 0 0 18px var(--violet-dim); transform: translateY(-2px); }
+.state-readout { margin-top: 14px; text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-dim); }
+.state-readout b { color: var(--cyan); }
