@@ -26,18 +26,18 @@ An Iinteractive Quantum Learning Platform
   - Responsive User Interface
 
 ## Technologies Used:
-   Frontend
-      - HTML5
-      - CSS3
-      - JavaScript (ES6)
-    Visualization
-      - Three.js
-      - OrbitControls.js
-    Development tools
-      - Visual Studio Code
-      - GitHub
-    Deployment
-      - Netlify
+## Frontend
+-HTML5
+- CSS3
+- JavaScript (ES6)
+## Visualization
+- Three.js
+- OrbitControls.js
+##  Development tools
+- Visual Studio Code
+- GitHub
+## Deployment
+- Netlify
 
 ## Screenshots
 Q-HUB
@@ -73,13 +73,13 @@ Q-HUB
 ![Dashboard](screenshots/dashboard.png)
 
 ## Installation:
-'''bash
+``bash
 Clone the repository
   git clone https://github.com/[praneethalakshmi08-max]/Q-HUB.git
 
 Naviagte to the project directory:
     Cd Q-HUB
-'''
+``
 ## How to Run
    - Option 1 (Recommended)
    1. Open the project using Visual Studio Code.
@@ -93,8 +93,9 @@ Naviagte to the project directory:
    2. directly in any modern browser.
 
 ## Project Structure:
- '''text
-  Q-HUB/
+
+```text
+Q-HUB/
   |-index.html
   |--css/
   |    |--style.css
@@ -113,7 +114,7 @@ Naviagte to the project directory:
   |     |--screenshots/
   |
   |--README.md
-  '''
+  ```
 
 ## Team Members:
 | Name | Responsibility |
