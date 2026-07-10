@@ -25,6 +25,43 @@ An interactive Quantum Learning Platform
   - Expert Network
   - Responsive User Interface
 
+## Target Audience:
+  Visor_quantum is designed for:
+  - Undergraduate and postgraduate students beginning their journey in quantum computing.
+  - Learners with little or no prior knowledge of quantum mechanics.
+  - Educators looking for interactive teaching resources.
+  - Self-learners interested in understanding quantum computing concepts through visualization.
+  - Students preparing for quantum computing courses, workshops, hackathons, and competitions.
+  - Anyone interested in exploring quantu computing using an interactive and beginner-friendly platform.
+   
+## Learning Objectives
+By using Visor_quantum, learners will be able to:
+
+- understand the fundamentals of quantum computing.
+- Explain the concepts of qubits, superposition, and entanglement.
+- Visualize quantum states using the interactive Bloch Sphere.
+- Understand the operations of common quantum gates (X, Y, Z, H, S and T).
+- Explore complex numbers, linear algebra, and tensor products through interactive simulations.
+- Build a strong foundation before progressing to multi-qubit systems and quantum algorithms.
+- Test their understanding through quizzes and receive immediate feedback.
+- Use the AI learning Assistant to clarify concepts and guide further learning.   
+
+## Educational Methodology
+Visor_quantum follows a structured, learner-centered approach to simplify complex quantum computing concepts.
+The platform is designed around the following learning process:
+1. learn Fundamentals
+  - Introduces the basic concepts of qubits, quantum states, and essential mathematics.
+2. Visualize Concepts
+  - Uses interactive 3D Bloch Sphere simulations to help learners understand abstract quantum           states and gate operations.
+3. Practice Through Interaction
+  - Allows users to experiment with quantum gates and mathematical operations using interactive         simulations.
+4. Reinforce Learning
+  - Provides quizzes with immediate feedback to assess undersatnding and strengthen conceptual           knowledge.
+5. AI-Assisted Guidance
+   - Offers an AI learning assistant that answers questions and provides explanations when               learners need additional support.
+6. Progressive Learning Path
+    - Organizes content from beginner to itermediate topics, ensuring learners build a strong             foundation before moving to advanced concepts.
+         
 ## Technologies Used:
 ## Frontend
 -HTML5
@@ -138,6 +175,11 @@ visor_quantum/
 ## Project Website
 Live Demo
   https://earnest-pudding-acaa71.netlify.app/
+
+## Demo video
+
+## User-Guide
+[User-guide](docs/User-Guide.docx)
 
 ## License
    This project was developed as part of the WISER Summer Program for educational purpose.
