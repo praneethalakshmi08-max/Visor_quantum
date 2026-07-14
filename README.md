@@ -34,17 +34,22 @@ An interactive Quantum Learning Platform
   - Students preparing for quantum computing courses, workshops, hackathons, and competitions.
   - Anyone interested in exploring quantu computing using an interactive and beginner-friendly platform.
    
-## Learning Objectives
-By using Visor_quantum, learners will be able to:
+## Measurable Learning Outcomes
+After completing the learning modules, learners will be able to:
+- Explain the difference between classical bits and quantum bits (qubits).
+- Understand and visualize quantum concepts such as superposition, quantum gates, and bloch sphere.
+- Apply basic quantum mathematics, including state vectors and tensor products.
+- Demonstrate understanding through interactive quizzes.
+- Track their learning progress using the Progress Dashboard.
 
-- understand the fundamentals of quantum computing.
-- Explain the concepts of qubits, superposition, and entanglement.
-- Visualize quantum states using the interactive Bloch Sphere.
-- Understand the operations of common quantum gates (X, Y, Z, H, S and T).
-- Explore complex numbers, linear algebra, and tensor products through interactive simulations.
-- Build a strong foundation before progressing to multi-qubit systems and quantum algorithms.
-- Test their understanding through quizzes and receive immediate feedback.
-- Use the AI learning Assistant to clarify concepts and guide further learning.   
+## Learning Assessment
+The platform measures learner progress through:
+- Interactive multiple-choice quizzes
+- Instant feedback after each quiz
+- Quiz score calculation
+- Progress tracking across copleted modules
+- Unlocking advanced learning content after completing beginner topics
+These assessment features allow learners to evaluate their understanding and identify areas that require further study. 
 
 ## Educational Methodology
 Visor_quantum follows a structured, learner-centered approach to simplify complex quantum computing concepts.
@@ -61,6 +66,8 @@ The platform is designed around the following learning process:
   - Offers an AI learning assistant that answers questions and provides explanations when learners need additional support.
 6. Progressive Learning Path
   - Organizes content from beginner to itermediate topics, ensuring learners build a strong foundation before moving to advanced concepts.
+ 7. Progress Dashboard
+    - The Progress Dashboard records quiz performance completed learning modules, and overall learning progress enabling learners to monitor their improvement throughout the course.  
          
 ## Technologies Used:
 ## Frontend
@@ -133,7 +140,12 @@ visor_quantum/
   |--docs/
   |     |--screenshots/
   |     |--reportdocx
-  |     |--User Guide 
+  |     |--User Guide
+  |
+  |--Jupyter Notebooks/
+  |             |--01_qubit_basics.ipynb
+  |             |--Bloch_Sphere_and _Quantum_State_visualization.ipynb
+  |             |--Multi_Qubit_system_and_Entanglement.ipynb
   |
   |--README.md
   ```
