@@ -4,13 +4,13 @@ An interactive Quantum Learning Platform
   Visor_quantum is a browser-based educational platform that helps beginners learn quantum computing through interative visualizations, simulations, structured learning paths, quizzes, and AI-assisted guidance. The platform focuses on making complex quantum concepts easier to understand by combining theory with hands-on exploration.
 
 ## Problem Statement:
-   Learning quantum computing is difficult for beginners due to several challenges:
-     - Strong mathematical prerequisities such as linear algebra and complex numbers.
-     - Abstract concepts like superposition and entanglement that are difficult to visualize.
-     - Limited beginner-friendly learning resources.
-     - Heavy focus on theory with minimal practical interaction.
-     - Difficulty in understanding quantum gates and state transformations.
-     - Lack of a structured learning roadmap.
+   - Learning quantum computing is difficult for beginners due to several challenges:
+   - Strong mathematical prerequisities such as linear algebra and complex numbers.
+   - Abstract concepts like superposition and entanglement that are difficult to visualize.
+   - Limited beginner-friendly learning resources.
+   - Heavy focus on theory with minimal practical interaction.
+   - Difficulty in understanding quantum gates and state transformations.
+   - Lack of a structured learning roadmap.
     Visor_quantum addresses these challenges by providing interactive simulations, visual learning, guided learning paths, and self-assessment tools.
 
 ## Features:
