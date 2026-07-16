@@ -5,12 +5,12 @@ An interactive Quantum Learning Platform
 
 ## Problem Statement:
    Learning quantum computing is difficult for beginners due to several challenges:
-    - Strong mathematical prerequisities such as linear algebra and complex numbers.
-    - Abstract concepts like superposition and entanglement that are difficult to visualize.
-    - Limited beginner-friendly learning resources.
-    - Heavy focus on theory with minimal practical interaction.
-    - Difficulty in understanding quantum gates and state transformations.
-    - Lack of a structured learning roadmap.
+     - Strong mathematical prerequisities such as linear algebra and complex numbers.
+     - Abstract concepts like superposition and entanglement that are difficult to visualize.
+     - Limited beginner-friendly learning resources.
+     - Heavy focus on theory with minimal practical interaction.
+     - Difficulty in understanding quantum gates and state transformations.
+     - Lack of a structured learning roadmap.
     Visor_quantum addresses these challenges by providing interactive simulations, visual learning, guided learning paths, and self-assessment tools.
 
 ## Features:
